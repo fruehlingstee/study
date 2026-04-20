@@ -13,6 +13,7 @@
 ![docker設定](docs/images/ubuntnsetup01.png)
 
 ### dvwaセットアップ
+port80を別で使用しているため今回は8080
 ![Ubuntnにて](docs/images/ubuntndvwa.png)
 ![ブラウザにて開く](docs/images/localhost01.png)
 ### 
