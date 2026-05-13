@@ -1,0 +1,6 @@
+wsl vscode内ターミナルで
+
+cd "/mnt/c/Users/rin.hal/classnotes/study/c c++"
+code .
+
+を入力
