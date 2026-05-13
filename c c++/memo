@@ -1,6 +1,26 @@
+wsl bashで
+
+code .
+
+を入力してvscodeを開く
+
+
 wsl vscode内ターミナルで
 
 cd "/mnt/c/Users/rin.hal/classnotes/study/c c++"
 code .
 
 を入力
+
+
+gcc main.c -o main
+./main
+
+で実行
+
+1. WSLターミナルを開きます。
+2. `cd "/mnt/c/Users/rin.hal/classnotes/study/c c++"` コマンドを入力して、プロジェクトディレクトリに移動します。
+3. `code .` コマンドを入力して、Visual Studio Codeを開きます。
+4. Visual Studio Codeが開いたら、ターミナルを開きます（Ctrl + `）。
+5. ターミナルで `gcc main.c -o main` コマンドを入力して、Cプログラムをコンパイルします。
+6. コンパイルが成功したら、`./main` コマンドを入力して、実行します。
