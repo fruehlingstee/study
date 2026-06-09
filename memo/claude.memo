@@ -1,0 +1,90 @@
+claude.md
+
+何を達成するのか
+どのファイルを触るのか
+どんな前提で進めるのか
+曖昧な点は何か
+
+要求されていない機能は追加しない
+一度しか使わないものを抽象化しない
+既存の書き方に合わせる
+複雑にできる場面でも、まず単純に解く
+
+依頼に直接関係するファイルだけ触る
+関係ないリファクタをしない
+既存のコメントやフォーマットを勝手に変えない
+未使用コードを見つけても、依頼されていなければ削除しない
+
+
+
+例えば、単にこう頼むより、
+
+バグを直して
+
+次のようにした方が安定します。
+
+このバグを再現するテストを追加し、そのテストが通るように修正して
+
+修正対象
+期待する結果
+確認方法
+触ってよい範囲
+触ってはいけない範囲
+
+plugin / skills = 能力追加
+CLAUDE.md       = 行動制御
+
+CLAUDE.mdで行動原則を固定する
+skills/pluginで作業能力を拡張する
+
+グローバルclaude
+推測で実装しない
+最小diffにする
+関係ないファイルを触らない
+既存設計を尊重する
+不要なリファクタをしない
+新しい依存関係を勝手に追加しない
+
+NG(プロジェクト直下claude.mdに書くほうが安全)
+特定プロジェクトのビルドコマンド
+API仕様
+ディレクトリ構成
+ブランチ運用
+iOSやReact Nativeなどの個別ルール
+
+~/.claude/
+├── CLAUDE.md
+├── settings.json
+├── skills/
+└── commands/
+
+project/
+└── CLAUDE.md
+
+グローバルCLAUDE.md
+  全プロジェクト共通の行動原則
+
+プロジェクトCLAUDE.md
+  そのリポジトリ固有のルール
+
+skills / plugin
+  再利用可能な作業手順や専門知識
+
+commands
+  よく使う定型タスク
+
+Prefer minimal diffs　変更は必要最小限に。無駄な行変更をしない
+Avoid unnecessary refactors　頼まれていないリファクタは勝手にしない
+Preserve existing architecture unless explicitly requested　明示的に求められない限り、既存の設計・構成を維持する
+Do not modify unrelated files　タスクと無関係なファイルは触らない
+Ask before introducing new dependencies　新しいライブラリ・パッケージを追加する前に確認を取る
+Do not change public API behavior unless required by the task　タスクに必要でない限り、外部向けAPIの挙動を変えない
+Always explain verification steps after implementation　実装後、「どう確認するか」の手順を必ず説明する
+
+CLAUDE.mdで基本方針を固定する
+重要な作業ではプロンプト側でも制約を再指定する
+大きな変更の前には必ず計画を出させる
+diffを確認してから次に進める
+
+実装前に、変更対象ファイル、実装方針、検証方法を説明してください。
+関係ないファイルは変更しないでください。
